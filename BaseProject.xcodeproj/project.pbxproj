@@ -3,16 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		344E11A52794659400D7C985 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 344E11A42794659400D7C985 /* SwiftProtobuf */; };
+		344E11AC2794669B00D7C985 /* donkeys.proto in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AB2794669B00D7C985 /* donkeys.proto */; };
+		344E11AE279466E600D7C985 /* donkeys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AD279466E600D7C985 /* donkeys.pb.swift */; };
+		344E11B027946AB400D7C985 /* DonkeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AF27946AB400D7C985 /* DonkeyCell.swift */; };
 		34531423266E1B03007699CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34531422266E1B03007699CC /* AppDelegate.swift */; };
 		34531427266E1B03007699CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34531426266E1B03007699CC /* ViewController.swift */; };
 		3453142C266E1B04007699CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3453142B266E1B04007699CC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		344E11AB2794669B00D7C985 /* donkeys.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = donkeys.proto; sourceTree = "<group>"; };
+		344E11AD279466E600D7C985 /* donkeys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = donkeys.pb.swift; sourceTree = "<group>"; };
+		344E11AF27946AB400D7C985 /* DonkeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyCell.swift; sourceTree = "<group>"; };
 		3453141F266E1B03007699CC /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34531422266E1B03007699CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34531426266E1B03007699CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,12 +32,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344E11A52794659400D7C985 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		344E11A82794664600D7C985 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				344E11AD279466E600D7C985 /* donkeys.pb.swift */,
+				344E11AB2794669B00D7C985 /* donkeys.proto */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		34531416266E1B03007699CC = {
 			isa = PBXGroup;
 			children = (
@@ -50,10 +67,12 @@
 		34531421266E1B03007699CC /* BaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				344E11A82794664600D7C985 /* Resources */,
 				34531422266E1B03007699CC /* AppDelegate.swift */,
 				34531426266E1B03007699CC /* ViewController.swift */,
 				3453142B266E1B04007699CC /* Assets.xcassets */,
 				34531430266E1B04007699CC /* Info.plist */,
+				344E11AF27946AB400D7C985 /* DonkeyCell.swift */,
 			);
 			path = BaseProject;
 			sourceTree = "<group>";
@@ -74,6 +93,9 @@
 			dependencies = (
 			);
 			name = BaseProject;
+			packageProductDependencies = (
+				344E11A42794659400D7C985 /* SwiftProtobuf */,
+			);
 			productName = BaseProject;
 			productReference = 3453141F266E1B03007699CC /* BaseProject.app */;
 			productType = "com.apple.product-type.application";
@@ -101,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 34531416266E1B03007699CC;
+			packageReferences = (
+				344E11A32794659400D7C985 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
 			productRefGroup = 34531420266E1B03007699CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344E11AE279466E600D7C985 /* donkeys.pb.swift in Sources */,
+				344E11AC2794669B00D7C985 /* donkeys.proto in Sources */,
 				34531427266E1B03007699CC /* ViewController.swift in Sources */,
 				34531423266E1B03007699CC /* AppDelegate.swift in Sources */,
+				344E11B027946AB400D7C985 /* DonkeyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +338,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		344E11A32794659400D7C985 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		344E11A42794659400D7C985 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 344E11A32794659400D7C985 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34531417266E1B03007699CC /* Project object */;
 }
