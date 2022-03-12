@@ -10,6 +10,12 @@ import SwiftProtobuf
 
 typealias Developer = GetDevelopersResponse.Developer
 
+extension Developer: TitleTableViewDataSource {
+    var title: String {
+        return name
+    }
+}
+
 final class HomeViewController: UIViewController {
         
     private lazy var tableView: UITableView = {
@@ -61,7 +67,8 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as TitleTableViewCell
-        cell.config(with: datasource?[indexPath.row].name ?? "Nessun Developer")
+        guard let datasource: TitleTableViewDataSource = datasource?[indexPath.row] else { return UITableViewCell() }
+        cell.config(with: datasource)
         return cell
     }
     

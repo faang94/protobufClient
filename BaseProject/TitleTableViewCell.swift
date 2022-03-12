@@ -8,6 +8,10 @@
 import UIKit
 import Reusable
 
+protocol TitleTableViewDataSource {
+    var title: String { get }
+}
+
 final class TitleTableViewCell: UITableViewCell, Reusable {
     
     private var titleLabel: UILabel = {
@@ -40,7 +44,7 @@ final class TitleTableViewCell: UITableViewCell, Reusable {
         ])
     }
     
-    func config(with text: String) {
-        titleLabel.text = text
+    func config(with model: TitleTableViewDataSource) {
+        titleLabel.text = model.title
     }
 }
