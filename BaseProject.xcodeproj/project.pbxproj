@@ -8,23 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		344E11A52794659400D7C985 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 344E11A42794659400D7C985 /* SwiftProtobuf */; };
-		344E11AC2794669B00D7C985 /* donkeys.proto in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AB2794669B00D7C985 /* donkeys.proto */; };
-		344E11AE279466E600D7C985 /* donkeys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AD279466E600D7C985 /* donkeys.pb.swift */; };
-		344E11B027946AB400D7C985 /* DonkeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AF27946AB400D7C985 /* DonkeyCell.swift */; };
+		344E11B027946AB400D7C985 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E11AF27946AB400D7C985 /* TitleTableViewCell.swift */; };
 		34531423266E1B03007699CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34531422266E1B03007699CC /* AppDelegate.swift */; };
-		34531427266E1B03007699CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34531426266E1B03007699CC /* ViewController.swift */; };
+		34531427266E1B03007699CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34531426266E1B03007699CC /* HomeViewController.swift */; };
 		3453142C266E1B04007699CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3453142B266E1B04007699CC /* Assets.xcassets */; };
+		345DE59B27DD034B00F1D6E6 /* developers.proto in Sources */ = {isa = PBXBuildFile; fileRef = 345DE59A27DD034B00F1D6E6 /* developers.proto */; };
+		345DE59D27DD041B00F1D6E6 /* developers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DE59C27DD041B00F1D6E6 /* developers.pb.swift */; };
+		345DE5A027DD086400F1D6E6 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 345DE59F27DD086400F1D6E6 /* Reusable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		344E11AB2794669B00D7C985 /* donkeys.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = donkeys.proto; sourceTree = "<group>"; };
-		344E11AD279466E600D7C985 /* donkeys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = donkeys.pb.swift; sourceTree = "<group>"; };
-		344E11AF27946AB400D7C985 /* DonkeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkeyCell.swift; sourceTree = "<group>"; };
+		344E11AF27946AB400D7C985 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		3453141F266E1B03007699CC /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34531422266E1B03007699CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34531426266E1B03007699CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		34531426266E1B03007699CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3453142B266E1B04007699CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34531430266E1B04007699CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		345DE59A27DD034B00F1D6E6 /* developers.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = developers.proto; sourceTree = "<group>"; };
+		345DE59C27DD041B00F1D6E6 /* developers.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = developers.pb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				344E11A52794659400D7C985 /* SwiftProtobuf in Frameworks */,
+				345DE5A027DD086400F1D6E6 /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +44,8 @@
 		344E11A82794664600D7C985 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				344E11AD279466E600D7C985 /* donkeys.pb.swift */,
-				344E11AB2794669B00D7C985 /* donkeys.proto */,
+				345DE59C27DD041B00F1D6E6 /* developers.pb.swift */,
+				345DE59A27DD034B00F1D6E6 /* developers.proto */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -69,10 +71,10 @@
 			children = (
 				344E11A82794664600D7C985 /* Resources */,
 				34531422266E1B03007699CC /* AppDelegate.swift */,
-				34531426266E1B03007699CC /* ViewController.swift */,
+				34531426266E1B03007699CC /* HomeViewController.swift */,
+				344E11AF27946AB400D7C985 /* TitleTableViewCell.swift */,
 				3453142B266E1B04007699CC /* Assets.xcassets */,
 				34531430266E1B04007699CC /* Info.plist */,
-				344E11AF27946AB400D7C985 /* DonkeyCell.swift */,
 			);
 			path = BaseProject;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 			name = BaseProject;
 			packageProductDependencies = (
 				344E11A42794659400D7C985 /* SwiftProtobuf */,
+				345DE59F27DD086400F1D6E6 /* Reusable */,
 			);
 			productName = BaseProject;
 			productReference = 3453141F266E1B03007699CC /* BaseProject.app */;
@@ -125,6 +128,7 @@
 			mainGroup = 34531416266E1B03007699CC;
 			packageReferences = (
 				344E11A32794659400D7C985 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				345DE59E27DD086400F1D6E6 /* XCRemoteSwiftPackageReference "Reusable" */,
 			);
 			productRefGroup = 34531420266E1B03007699CC /* Products */;
 			projectDirPath = "";
@@ -151,11 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344E11AE279466E600D7C985 /* donkeys.pb.swift in Sources */,
-				344E11AC2794669B00D7C985 /* donkeys.proto in Sources */,
-				34531427266E1B03007699CC /* ViewController.swift in Sources */,
+				34531427266E1B03007699CC /* HomeViewController.swift in Sources */,
 				34531423266E1B03007699CC /* AppDelegate.swift in Sources */,
-				344E11B027946AB400D7C985 /* DonkeyCell.swift in Sources */,
+				344E11B027946AB400D7C985 /* TitleTableViewCell.swift in Sources */,
+				345DE59D27DD041B00F1D6E6 /* developers.pb.swift in Sources */,
+				345DE59B27DD034B00F1D6E6 /* developers.proto in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +352,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		345DE59E27DD086400F1D6E6 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -355,6 +367,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 344E11A32794659400D7C985 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobuf;
+		};
+		345DE59F27DD086400F1D6E6 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345DE59E27DD086400F1D6E6 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

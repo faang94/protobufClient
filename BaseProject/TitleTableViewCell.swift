@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Reusable
 
-final class DonkeyCell: UITableViewCell {
+final class TitleTableViewCell: UITableViewCell, Reusable {
     
     private var titleLabel: UILabel = {
         let titleLabel = UILabel()
