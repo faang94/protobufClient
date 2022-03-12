@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message GetDevelopersResponse {
+    message Developer {
+        enum Platform {
+            iOS = 0;
+            React = 1;
+        }
+        int32 id = 1;
+        string name = 2;
+        string surname = 3;
+        int32 age = 4;
+        Platform platform = 5;
+        bool bald = 6; 
+    }
+    repeated Developer developers = 1;
+}
