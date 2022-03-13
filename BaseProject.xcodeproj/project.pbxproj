@@ -15,6 +15,8 @@
 		345DE59B27DD034B00F1D6E6 /* developers.proto in Sources */ = {isa = PBXBuildFile; fileRef = 345DE59A27DD034B00F1D6E6 /* developers.proto */; };
 		345DE59D27DD041B00F1D6E6 /* developers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DE59C27DD041B00F1D6E6 /* developers.pb.swift */; };
 		345DE5A027DD086400F1D6E6 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 345DE59F27DD086400F1D6E6 /* Reusable */; };
+		345DE5A727DD143D00F1D6E6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DE5A627DD143D00F1D6E6 /* HomeViewModel.swift */; };
+		345DE5A927DD147100F1D6E6 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345DE5A827DD147100F1D6E6 /* Developer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		34531430266E1B04007699CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345DE59A27DD034B00F1D6E6 /* developers.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = developers.proto; sourceTree = "<group>"; };
 		345DE59C27DD041B00F1D6E6 /* developers.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = developers.pb.swift; sourceTree = "<group>"; };
+		345DE5A627DD143D00F1D6E6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		345DE5A827DD147100F1D6E6 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +48,6 @@
 		344E11A82794664600D7C985 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				345DE59C27DD041B00F1D6E6 /* developers.pb.swift */,
-				345DE59A27DD034B00F1D6E6 /* developers.proto */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -71,12 +73,48 @@
 			children = (
 				344E11A82794664600D7C985 /* Resources */,
 				34531422266E1B03007699CC /* AppDelegate.swift */,
-				34531426266E1B03007699CC /* HomeViewController.swift */,
-				344E11AF27946AB400D7C985 /* TitleTableViewCell.swift */,
+				345DE5A527DD141500F1D6E6 /* ViewController */,
+				345DE5A427DD13C900F1D6E6 /* ViewModel */,
+				345DE5A327DD13C000F1D6E6 /* Model */,
+				345DE5A127DD13A200F1D6E6 /* View */,
 				3453142B266E1B04007699CC /* Assets.xcassets */,
 				34531430266E1B04007699CC /* Info.plist */,
 			);
 			path = BaseProject;
+			sourceTree = "<group>";
+		};
+		345DE5A127DD13A200F1D6E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				344E11AF27946AB400D7C985 /* TitleTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		345DE5A327DD13C000F1D6E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				345DE59C27DD041B00F1D6E6 /* developers.pb.swift */,
+				345DE59A27DD034B00F1D6E6 /* developers.proto */,
+				345DE5A827DD147100F1D6E6 /* Developer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		345DE5A427DD13C900F1D6E6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				345DE5A627DD143D00F1D6E6 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		345DE5A527DD141500F1D6E6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				34531426266E1B03007699CC /* HomeViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				34531427266E1B03007699CC /* HomeViewController.swift in Sources */,
+				345DE5A727DD143D00F1D6E6 /* HomeViewModel.swift in Sources */,
 				34531423266E1B03007699CC /* AppDelegate.swift in Sources */,
 				344E11B027946AB400D7C985 /* TitleTableViewCell.swift in Sources */,
 				345DE59D27DD041B00F1D6E6 /* developers.pb.swift in Sources */,
 				345DE59B27DD034B00F1D6E6 /* developers.proto in Sources */,
+				345DE5A927DD147100F1D6E6 /* Developer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

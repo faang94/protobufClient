@@ -6,15 +6,6 @@
 //
 
 import UIKit
-import SwiftProtobuf
-
-typealias Developer = GetDevelopersResponse.Developer
-
-extension Developer: TitleTableViewDataSource {
-    var title: String {
-        return name
-    }
-}
 
 final class HomeViewController: UIViewController {
         
@@ -29,32 +20,38 @@ final class HomeViewController: UIViewController {
     }()
     
     var datasource: [Developer]?
+    var viewModel: HomeViewModel
+    
     
     override func loadView() {
         super.loadView()
         setUpLayout()
     }
 
+    
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        URLSession.shared.dataTask(
-            with: URL(string: "http://localhost:8080/developers")!,
-            completionHandler: { [weak self] data, response, error in
-                guard error == nil,
-                      let data = data
-                else {
-                    print(error ?? "Unknown error")
-                    return
-                }
-                
-                let developers = try! GetDevelopersResponse(serializedData: data)
-                self?.datasource = developers.developers
-                DispatchQueue.main.async { [weak self] in
-                    self?.tableView.reloadData()
-                }
+        viewModel.onDeveloperUpdated = { [weak self] developers in
+            self?.datasource = developers
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
             }
-        ).resume()
+        }
+        
+        viewModel.fetchDevelopers(
+            onFailure: { error in
+                print(error)
+            }
+        )
     }
         
     private func setUpLayout() {
